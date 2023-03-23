@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CACULATOR</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <form name="calculator">
+        <table>
+            <tr>
+                <td colspan="4">
+                    <input class="display" type="text" name="display" disabled>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input class="control" type="button" value="C" name="clear" onclick="calculator.display.value=''"></td>
+                <td><input class="control" type="button" value="/" name="divid" onclick="calculator.display.value+='/'"></td>
+                <td><input class="control" type="button" value="x" name="multiplication" onclick="calculator.display.value+='*'"></td>
+                <td><input class="control" type="button" value="D" name="delete" onclick="calculator.display.value=calculator.display.value.substr(0,calculator.display.value.length-1)"></td>
+
+            </tr>
+
+            <tr>
+                <td><input type="button" value="7" name="seven" onclick="calculator.display.value+='7'"></td>
+                <td><input type="button" value="8" name="eighth" onclick="calculator.display.value+='8'"></td>
+                <td><input type="button" value="9" name="nine" onclick="calculator.display.value+='9'"></td>
+                <td><input class="control" type="button" value="-" name="minus" onclick="calculator.display.value+='-'"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="4" name="four" onclick="calculator.display.value+='4'"></td>
+                <td><input type="button" value="5" name="five" onclick="calculator.display.value+='5'"></td>
+                <td><input type="button" value="6" name="six" onclick="calculator.display.value+='6'"></td>
+                <td><input class="control" type="button" value="+" name="plus" onclick="calculator.display.value+='+'"></td>
+            </tr>
+            <tr>
+
+                <tr>
+                    <td><input type="button" value="1" name="one" onclick="calculator.display.value+='1'"></td>
+                    <td><input type="button" value="2" name="two" onclick="calculator.display.value+='2'"></td>
+                    <td><input type="button" value="3" name="three" onclick="calculator.display.value+='3'"></td>
+                </tr>
+                <td><input class="control" type="button" value="%" name="percentage"></td>
+                <td><input type="button" value="0" name="zero" onclick="calculator.display.value+='0'"></td>
+                <td><input class="control" type="button" value="." name="dot" onclick="calculator.display.value+='.'"></td>
+                <td><input class="equal" type="button" value="=" name="equaTo" onclick="calculator.display.value=eval(calculator.display.value)"></td>
+            </tr>
+        </table>
+    </form>
+    <div></div>
+</body>
+
+</html>
